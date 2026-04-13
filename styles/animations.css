@@ -89,7 +89,7 @@
     transition-delay: 0.06s;
   }
 
-  .heart{
+  .heart {
     animation: like 0.3s ease-in 0.1s;
     transform-origin: center;
   }

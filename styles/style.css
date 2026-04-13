@@ -15,8 +15,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   padding-block-start: 100px;
-  font-family: var(--inter);
-  font-variation-settings: 'wight' var(--font-width-text) 410;
+  font-family: var(--inter), 'Open Sans';
+  font-variation-settings: 'wght' var(--font-width-text);
   font-size: var(--font-size-ordinary);
   background: 
   repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 4px 2px),
@@ -37,7 +37,7 @@
 .block-page {
   justify-self: center;
   display: grid;
-  inline-size: var(--blocks-size-mobile);/*clamp( 320px, 375px, 700px);*/ 
+  inline-size: var(--blocks-size-mobile);/*clamp( 320px, 375px, 700px);*/
 }
 
 .style-blocks {
@@ -49,7 +49,7 @@
   block-size: 327px;
   line-height: 32px;
   border: 2px solid #000;
-  font-family: var(--pressstart);
+  font-family: var(--pressstart), 'Pixelify Sans';
   text-transform: uppercase;
 }
 
@@ -80,11 +80,20 @@
   top: 25px;
   right: 25px;
   font-family: var(--pressstart);
-  font-variation-settings: 'wight' calc(var(--font-width-text) - 10px);
+  font-variation-settings: 'wght' calc(var(--font-width-text) - 10px);
   font-size: var(--font-size-small);
   text-shadow: 0 0 1px #fff;
   text-transform: uppercase;
   opacity: 0.5;
+}
+
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
+  .label-image {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+    opacity: 0.3;
+  }
 }
 
 .section__card-image {
@@ -130,7 +139,7 @@
   padding-block: 5px;
   padding-inline: 10.3px;
   font-size: var(--font-size-ordinary);
-  font-variation-settings: 'wight' var(--font-width-title);
+  font-variation-settings: 'wght' var(--font-width-title);
 }
 
 .section__box {
@@ -171,6 +180,9 @@
 .button__text {
   position: relative;
   z-index: 2;
+  font-family: var(--pressstart), 'Pixelify Sans';
+  font-size: var(--font-size-small);
+  text-transform: capitalize;
   color: #000;
   transition: color, 0.5s ease-in-out;
 }
@@ -178,7 +190,7 @@
 .card__like-button:hover .button__text {
   color: #fff;
   mix-blend-mode: difference;
-  transition: all, 0.5s ease-in-out;
+  transition: color, 0.5s ease-in-out;
 }
 
 .card__like-button::before {
@@ -186,11 +198,11 @@
   position: absolute;
   z-index: 1;
   top: 0;
-  left: -100%; 
+  left: -100%;
   inline-size: 100%;
   block-size: 100%;
   background-color: #000;
-  transition: all, 0.5s ease-in-out;
+  transition: left, background-color, 0.5s ease-in-out;
 }
 
 .card__like-button:hover::before {
@@ -205,12 +217,6 @@
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-borders);
   outline: none;
-}
-
-.button__text {
-  font-family: var(--pressstart);
-  font-size: var(--font-size-small);
-  text-transform: capitalize;
 }
 
 .floppy {
@@ -232,7 +238,7 @@
 
 .save-text {
     text-align: left;
-    font-family: var(--pressstart);
+    font-family: var(--pressstart), 'Pixelify Sans';
     font-weight: 400;
     font-size: var(--font-size-small);
     line-height: 150%;
@@ -254,7 +260,7 @@
   grid-column: 1 / 3;
   inline-size: 100%;
   block-size: 38px;
-  font-family: var(--pressstart);
+  font-family: var(--pressstart), 'Pixelify Sans';
   font-size: var(--font-size-small);
   font-variation-settings: 'wdth' calc(var(--font-width-text) - 10x);
   text-transform: uppercase;

@@ -4,8 +4,9 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
+  font-style: 400 785;
   src:
-    local('Open Sans'),
+    local('Inter'),
     url('Inter-Variable.woff2') format('woff2 support variations'),
     url('Inter-Variable.woff2') format('woff2-variations');
 }
@@ -13,9 +14,8 @@
 @font-face {
   font-display: swap;
   font-family: 'Press Start 2P';
-  font-style: normal;
   font-weight: 900;
   src:
-    local('Pixelify Sans'),
+    local('Press Start 2P'),
     url('PressStart2P-Regular.woff') format('woff');
 } 
