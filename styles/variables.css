@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --inter: 'Inter';
+  --pressstart: 'Press Start 2P';
+  --font-width-title: 715;
+  --font-width-text: 410;
+  --font-size-small: 14px;
+  --font-size-ordinary: 18px;
+  --color-borders: #000;
+  --borders: 2px solid var(--color-borders);
+  --blocks-size-mobile: 375px;
+  --blocks-size-laptop: 700px;
+  --contour-color: #000;
+  --body-heart-color: transparent;
+  --core-heart-color: transparent;
+  --spark-heart-color: transparent;
+}

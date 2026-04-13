@@ -1,1 +1,21 @@
 /* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  src:
+    local('Open Sans'),
+    url('Inter-Variable.woff2') format('woff2 support variations'),
+    url('Inter-Variable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    local('Pixelify Sans'),
+    url('PressStart2P-Regular.woff') format('woff');
+} 

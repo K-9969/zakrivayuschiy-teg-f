@@ -9,8 +9,315 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
+  display: grid;
+  gap: 100px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding-block-start: 100px;
+  font-family: var(--inter);
+  font-variation-settings: 'wight' var(--font-width-text) 410;
+  font-size: var(--font-size-ordinary);
+  background: 
+  repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 4px 2px),
+  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 4px 2px),
+  linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a 100vh);
+  background-size: cover;
+}
+
+.border-block-page {
+  border: var(--borders);
+}
+
+.border-element-page {
+  border-block-start: var(--borders);
+  border-block-end: var(--borders);
+}
+
+.block-page {
+  justify-self: center;
+  display: grid;
+  inline-size: var(--blocks-size-mobile);/*clamp( 320px, 375px, 700px);*/ 
+}
+
+.style-blocks {
+  background-color: #fff;
+}
+
+.header {
+  grid-template-rows: 1fr 1fr;
+  block-size: 327px;
+  line-height: 32px;
+  border: 2px solid #000;
+  font-family: var(--pressstart);
+  text-transform: uppercase;
+}
+
+.main {
+  gap: 49.6px;
+}
+
+.header__title {
+  align-self: end;
+  justify-self: center;
+  font-size: 49px;
+}
+
+.header__text {
+  align-self: start;
+  justify-self: center;
+  padding-block-start: 18.5px;
+  font-size: var(--font-size-small);
+}
+
+.box-image {
+  position: relative;
+  mix-blend-mode: hard-light;
+}
+
+.label-image {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--pressstart);
+  font-variation-settings: 'wight' calc(var(--font-width-text) - 10px);
+  font-size: var(--font-size-small);
+  text-shadow: 0 0 1px #fff;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.section__card-image {
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.sections {
+  .description {
+    filter: blur(5px);
+  }
+
+  .clear-sheet {
+    filter: brightness(90%) contrast(30%);
+  }
+
+  .doubt {
+    filter: drop-shadow(v-shadow #f00);
+  }
+  
+  .ideal {
+    filter: saturate(200%);
+  }
+
+  .support {
+    filter: sepia(50%);
+  }
+
+  .crutches {
+    filter: invert(100%) hue-rotate(33deg);
+  }
+
+  .despair {
+    filter: grayscale(100%);
+  }
+
+  .here {
+    filter: opacity(99%);
+  }
+}
+
+.section__title {
+  padding-block: 5px;
+  padding-inline: 10.3px;
+  font-size: var(--font-size-ordinary);
+  font-variation-settings: 'wight' var(--font-width-title);
+}
+
+.section__box {
+  display: grid;
+  gap: 25px;
+  padding-inline: 25.5px;
+  padding-block: 18px 25.5px;
+  line-height: 21px;
+}
+
+.like-container {
+  display: flex;
+  gap: 7px;
+  justify-self: end;
+}
+
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 38px;
+  block-size: 38px;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border, 0.3s ease;
+}
+
+.card__like-button {
+  position: relative;
+  inline-size: 130px;
+  overflow-x: hidden;
+  background-color: #fff;
+  border: var(--borders);
+  transition: box-shadow, 0.3s ease;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  transition: color, 0.5s ease-in-out;
+}
+
+.card__like-button:hover .button__text {
+  color: #fff;
+  mix-blend-mode: difference;
+  transition: all, 0.5s ease-in-out;
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -100%; 
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: #000;
+  transition: all, 0.5s ease-in-out;
+}
+
+.card__like-button:hover::before {
+  left: 0;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: #000;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--color-borders);
+  outline: none;
+}
+
+.button__text {
+  font-family: var(--pressstart);
+  font-size: var(--font-size-small);
+  text-transform: capitalize;
+}
+
+.floppy {
+  width: 28px;
+  height: 28px;
+}
+
+.save-in-floppy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap:  4.5px;
+  inline-size: 306px;
+  block-size: 84px;
+  margin: -50px auto 150px;
+  padding-block-end: 12px;
+}
+
+.save-text {
+    text-align: left;
+    font-family: var(--pressstart);
+    font-weight: 400;
+    font-size: var(--font-size-small);
+    line-height: 150%;
+}
+
+.dialog__save[open] {
+  display: grid;
+  grid-template-columns: min-content min-content, 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+  inline-size: 341px;
+  block-size: 191px;
+  padding-inline: 40px;
+  padding-block-start: 25.5px;
+  padding-block-end: 30px;
+}
+
+.button-confirm {
+  grid-column: 1 / 3;
+  inline-size: 100%;
+  block-size: 38px;
+  font-family: var(--pressstart);
+  font-size: var(--font-size-small);
+  font-variation-settings: 'wdth' calc(var(--font-width-text) - 10x);
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.dialog__floppy {
+  align-self: center;
+  width: 38px;
+  height: 48px;
+}
+
+.dialog__save::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+@media (width > 700px ) {
+  .block-page {
+    inline-size: var(--blocks-size-laptop);/*clamp( 320px, 375px, 700px);*/ 
+  }
+
+  .header {
+    block-size: 368px;
+    line-height: 42px;
+  }
+
+  .header__title {
+    font-size: 65px;
+  }
+
+  .header__text {
+    padding-block-start: 22px;
+    font-size: 23px;
+  }
+
+  .main {
+    gap: 51.8px;
+  }
+
+  .section__title {
+    padding-block: 3px;
+  }
+
+  .floppy {
+    height: 22px;
+  }
+
+  .save-in-floppy {
+    flex-direction: initial;
+    justify-content: start;
+    gap: 5px;
+    inline-size: 334px;
+    block-size: 52px;
+    padding-inline-start: 14.5px;
+    padding-block-start: 12px;
+    P {
+      text-wrap: nowrap;
+    }
+  }
+
+  .dialog__save[open] {
+    inline-size: 353px;
+    padding-inline: 30px;
+  }
 }
