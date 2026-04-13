@@ -238,6 +238,7 @@
 
 .save-text {
     text-align: left;
+    text-wrap: nowrap;
     font-family: var(--pressstart), 'Pixelify Sans';
     font-weight: 400;
     font-size: var(--font-size-small);
@@ -317,9 +318,6 @@
     block-size: 52px;
     padding-inline-start: 14.5px;
     padding-block-start: 12px;
-    P {
-      text-wrap: nowrap;
-    }
   }
 
   .dialog__save[open] {
