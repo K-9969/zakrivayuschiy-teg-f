@@ -1,13 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --inter: 'Inter';
+  --main-font: 'Inter';
   --pressstart: 'Press Start 2P';
   --font-width-title: 715;
   --font-width-text: 410;
   --font-size-small: 14px;
   --font-size-ordinary: 18px;
-  --color-borders: #000;
-  --borders: 2px solid var(--color-borders);
+  --base-color: #fff;
+  --main-color: #000;
+  --borders: 2px solid var(--main-color);
   --blocks-size-mobile: 375px;
   --blocks-size-laptop: 700px;
   --contour-color: #000;

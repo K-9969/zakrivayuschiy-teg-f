@@ -30,19 +30,19 @@
 }
 
 .contoure {
-  transition: fill, 0.1s linear;
+  transition: fill, 0.1s linear 0s;
 }
 
 .core {
-  transition: fill, 0.3s linear;
-  transition-delay: 0.03s;
+  transition: fill, 0.3s linear 0.03s;
 }
 
-.body-main {
-  transition: fill, 0.3s linear;
+.main-body {
+  transition: fill, 0.3s linear 0s;
 }
 
 .like-icon {
+  cursor: pointer;
   transform-origin: center
 }
 
@@ -54,7 +54,7 @@
     transition-delay: initial;
   }
 
-  .body-main {
+  .main-body {
     transition-delay: 0.05s;
   }
 }
@@ -66,7 +66,7 @@
     transition-delay: initial;
   }
 
-  .body-main {
+  .main-body {
     transition-delay: 0.05s;
   }
 }
@@ -85,8 +85,7 @@
   }
 
   .contoure {
-    transition: fill, 0.3s linear;
-    transition-delay: 0.06s;
+    transition: fill, 0.3s linear 0.06s;
   }
 
   .heart {
