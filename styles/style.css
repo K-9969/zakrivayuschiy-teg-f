@@ -15,13 +15,13 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   padding-block: 100px;
-  font-family: var(--main-font), 'sans-serif';
-  font-variation-settings: 'wght' var(--font-width-text);
+  font-family: var(--main-font), "sans-serif";
+  font-variation-settings: "wght" var(--font-width-text);
   font-size: var(--font-size-ordinary);
-  background: 
-  repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-  linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a 100vh);
+  background:
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a 100vh);
   background-size: cover;
 }
 
@@ -40,7 +40,7 @@
   justify-self: center;
   display: grid;
   min-inline-size: 320px;
-  inline-size: var(--blocks-size-mobile);/*clamp( 320px, 375px, 700px);*/
+  inline-size: var(--blocks-size-mobile); /*clamp( 320px, 375px, 700px);*/
 }
 
 .style-blocks {
@@ -51,7 +51,7 @@
   grid-template-rows: 1fr 1fr;
   block-size: 327px;
   line-height: 32px;
-  font-family: var(--pressstart), 'Courier New';
+  font-family: var(--pressstart), "Courier New";
   text-transform: uppercase;
 }
 
@@ -83,14 +83,15 @@
   top: 25px;
   right: 25px;
   font-family: var(--pressstart);
-  font-variation-settings: 'wght' calc(var(--font-width-text) - 10px);
+  font-variation-settings: "wght" calc(var(--font-width-text) - 10px);
   font-size: var(--font-size-small);
   text-shadow: 0 0 1px var(--base-color);
   text-transform: uppercase;
   opacity: 0.5;
 }
 
-@supports (text-stroke: 1px var(--base-color)) or (-webkit-text-stroke: 1px var(--base-color)) {
+@supports (text-stroke: 1px var(--base-color)) or
+  (-webkit-text-stroke: 1px var(--base-color)) {
   .label-image {
     -webkit-text-stroke: 1px var(--base-color);
     text-stroke: 1px var(--base-color);
@@ -115,7 +116,7 @@
 .doubt {
   filter: drop-shadow(v-shadow #f00);
 }
-  
+
 .ideal {
   filter: saturate(200%);
 }
@@ -140,7 +141,7 @@
   padding-block: 5px;
   padding-inline: 10.3px;
   font-size: var(--font-size-ordinary);
-  font-variation-settings: 'wght' var(--font-width-title);
+  font-variation-settings: "wght" var(--font-width-title);
 }
 
 .section__text {
@@ -165,7 +166,9 @@
   padding: 0;
   background-color: transparent;
   border: 2px solid transparent;
-  transition: border, 0.3s ease;
+  transition:
+    border,
+    0.3s ease;
 }
 
 .button {
@@ -174,24 +177,30 @@
   overflow-x: hidden;
   color: var(--base-color);
   background-color: var(--base-color);
-  transition: box-shadow, 0.3s ease;
+  transition:
+    box-shadow,
+    0.3s ease;
 }
 
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--pressstart), 'Courier New';
+  font-family: var(--pressstart), "Courier New";
   font-size: var(--font-size-small);
   mix-blend-mode: difference;
-  transition: color, 0.5s ease-in-out;
+  transition:
+    color,
+    0.5s ease-in-out;
 }
 
 .button:hover .button__text {
-  transition: color, 0.5s ease-in-out;
+  transition:
+    color,
+    0.5s ease-in-out;
 }
 
 .button::before {
-  content: '';
+  content: "";
   pointer-events: none;
   position: absolute;
   z-index: 1;
@@ -200,7 +209,10 @@
   inline-size: 100%;
   block-size: 100%;
   background-color: var(--main-color);
-  transition: left, background-color, 0.5s ease-in-out;
+  transition:
+    left,
+    background-color,
+    0.5s ease-in-out;
 }
 
 .button:hover::before {
@@ -222,7 +234,9 @@
   width: 28px;
   height: 28px;
   mix-blend-mode: difference;
-  transition: color, 0.5s ease-in-out;
+  transition:
+    color,
+    0.5s ease-in-out;
 }
 
 .save-button {
@@ -258,9 +272,9 @@
   grid-column: 1 / 3;
   inline-size: 100%;
   block-size: 38px;
-  font-family: var(--pressstart), 'Courier New';
+  font-family: var(--pressstart), "Courier New";
   font-size: var(--font-size-small);
-  font-variation-settings: 'wdth' calc(var(--font-width-text) - 10x);
+  font-variation-settings: "wdth" calc(var(--font-width-text) - 10x);
   text-transform: uppercase;
   background-color: transparent;
 }
@@ -277,14 +291,14 @@
 }
 
 .save-text {
-  font-family: var(--pressstart), 'Courier New';
+  font-family: var(--pressstart), "Courier New";
   font-size: var(--font-size-small);
   line-height: 1.5;
 }
 
-@media (width > 700px ) {
+@media (width > 700px) {
   .block-page {
-    inline-size: var(--blocks-size-laptop);/*clamp( 320px, 375px, 700px);*/ 
+    inline-size: var(--blocks-size-laptop); /*clamp( 320px, 375px, 700px);*/
   }
 
   .header {
