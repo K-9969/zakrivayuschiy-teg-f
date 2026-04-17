@@ -51,11 +51,16 @@
   grid-template-rows: 1fr 1fr;
   block-size: 327px;
   line-height: 32px;
-  font-family: var(--pressstart), "Courier New";
+  font-family: var(--accent-font), "Courier New";
   text-transform: uppercase;
 }
 
 .main {
+  gap: 49.8px;
+}
+
+.main__section {
+  display: grid;
   gap: 49.6px;
 }
 
@@ -82,8 +87,8 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--pressstart);
-  font-variation-settings: "wght" calc(var(--font-width-text) - 10px);
+  font-family: var(--accent-font);
+  font-variation-settings: "wght" calc(var(--font-width-text) - 10);
   font-size: var(--font-size-small);
   text-shadow: 0 0 1px var(--base-color);
   text-transform: uppercase;
@@ -185,7 +190,7 @@
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--pressstart), "Courier New";
+  font-family: var(--accent-font), "Courier New";
   font-size: var(--font-size-small);
   mix-blend-mode: difference;
   transition:
@@ -255,8 +260,6 @@
   column-gap: 20px;
   row-gap: 30px;
   position: fixed;
-  inset: 0px;
-  inset-block-start: 60px;
   align-self: center;
   justify-self: center;
   inline-size: 341px;
@@ -265,16 +268,15 @@
   padding-inline: 38px;
   padding-block-start: 25.9px;
   padding-block-end: 30px;
-  opacity: 0.3;
 }
 
 .button-confirm {
   grid-column: 1 / 3;
   inline-size: 100%;
   block-size: 38px;
-  font-family: var(--pressstart), "Courier New";
+  font-family: var(--accent-font), "Courier New";
   font-size: var(--font-size-small);
-  font-variation-settings: "wdth" calc(var(--font-width-text) - 10x);
+  font-variation-settings: "wdth" calc(var(--font-width-text) - 10);
   text-transform: uppercase;
   background-color: transparent;
 }
@@ -291,9 +293,10 @@
 }
 
 .save-text {
-  font-family: var(--pressstart), "Courier New";
+  font-family: var(--accent-font), "Courier New";
   font-size: var(--font-size-small);
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 @media (width > 700px) {
@@ -316,7 +319,11 @@
   }
 
   .main {
-    gap: 51.8px;
+    gap: 48.9px;
+  }
+
+  .main__section {
+    gap: 51.5px;
   }
 
   .section__title {
@@ -325,6 +332,7 @@
 
   .section__text {
     padding-block-start: 30px;
+    line-height: 1.17;
   }
 
   .box-image {
@@ -338,14 +346,13 @@
   .save-button {
     flex-direction: initial;
     justify-content: center;
-    gap: 7px;
+    gap: 7.5px;
     inline-size: 336px;
-    block-size: 50px;
+    block-size: 55px;
   }
 
   .dialog__save[open] {
     inline-size: 353px;
     padding-inline: 30px;
-    inset-block-start: 280px;
   }
 }
